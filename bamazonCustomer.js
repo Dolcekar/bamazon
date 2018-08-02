@@ -85,7 +85,7 @@ var purchase = function(){
 					var saleTotal = res[0].price * productPurchased[0].Quantity;
 
 					//connect to the mysql database Departments and updates the saleTotal for the id of the item purchased
-					connection.query("UPDATE Departments SET TotalSales = ? WHERE DepartmentName = ?;", [saleTotal, res[0].DepartmentName], function(err, resultOne){
+					connection.query("UPDATE Departments SET TotalSales = ? WHERE dep_name = ?;", [saleTotal, res[0].dep_name], function(err, resultOne){
 						if(err) console.log('error: ' + err);
 						return resultOne;
 					})
