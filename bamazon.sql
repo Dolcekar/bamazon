@@ -1,12 +1,14 @@
+DROP database IF EXISTS bamazon;
 CREATE DATABASE bamazon;
 USE bamazon;
 
 CREATE TABLE products (
 id INTEGER (11) AUTO_INCREMENT NOT NULL,
-product_name VARCHAR(10),
-dep_name VARCHAR(10),
+product_name VARCHAR(100),
+dep_name VARCHAR(100),
 price DECIMAL(4, 2),
-stock_quantity INT(10)
+stock_quantity INT(10),
+PRIMARY KEY(id)
 );
 
 
